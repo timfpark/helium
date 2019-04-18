@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node dist/server.js",
-    "test": "mocha --reporter spec --compilers ts:ts-node/register 'test/**/*Test.ts'",
+    "test": "mocha --reporter spec --compilers ts:ts-node/register '**/*.test.ts'",
     "build": "gulp scripts",
     "docker-build": "docker build -t helium:canary .",
     "docker-run": "docker run -it -p 8080:8080 helium:canary"
@@ -23,7 +23,16 @@
     "url": "https://github.com/Microsoft/helium/issues"
   },
   "homepage": "https://github.com/Microsoft/helium#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/restify": "^7.2.9",
+    "body-parser": "^1.18.3",
+    "restify": "^8.3.0",
+    "restify-errors": "^7.0.0",
+    "restify-plugins": "^1.6.0",
+    "ts-node": "^3.3.0",
+    "typescript": "^3.4.3"
+  },
   "devDependencies": {
     "@types/chai": "^3.4.34",
     "@types/chai-http": "0.0.29",
@@ -32,11 +41,6 @@
     "chai-http": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-typescript": "^3.1.1",
-    "mocha": "^3.5.3",
-    "restify": "^8.3.0",
-    "restify-errors": "^7.0.0",
-    "restify-plugins": "^1.6.0",
-    "ts-node": "^3.3.0",
-    "typescript": "^2.0.6"
+    "mocha": "^3.1.2"
   }
 }

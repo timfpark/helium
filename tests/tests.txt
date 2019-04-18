@@ -1,0 +1,2 @@
+Placeholder for ideal Mocha tests location
+TODO: Investigate filepath needed in package.json for mocha to find tests in this directory
